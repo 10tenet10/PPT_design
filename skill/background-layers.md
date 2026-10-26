@@ -1,45 +1,58 @@
-# 补充文档：背景层（E1–E5）落页规则与用量原则
+# 补充文档：背景层（E1–E5）落页规则、方向参数与用量
 
-本文是 `industry-research-deck` 的补充，规定主 deck 使用的五种静态背景层、各自落在哪类页面、全册用量上限，以及生成与写法。E6（光晕+颗粒）不采用。
+本文是 `industry-research-deck` 的补充，是背景层的**唯一实现规格**：SKILL.md §5 只写原则，坐标、颜色、生成与落位都以本文为准。E6（光晕+颗粒）不采用。
 
 ## 为什么是静态层
-幻灯片没有动效和滚动；UI 设计里让页面「不空」的大多是静态层。幻灯片格式只收纯色（无渐变/阴影），因此底图一律做成 PNG/JPEG 资产上传（`/_blob/<id>`），导出 PPTX 时原样保留。
+幻灯片没有动效和滚动；UI 设计里让页面「不空」的大多是静态层。底图一律做成 PNG 资产上传（`/_blob/<id>`），导出 PPTX 时原样保留。**资产只在上传它的工件里有效**：样张册里的底图，主 deck 要重新上传一次。
 
 ## 五种背景层 → 页面类型
 
 | 编号 | 手法 | 来源 | 落在哪类页 | 全册用量 |
 |---|---|---|---|---|
-| E1 | 点阵网格 + 左侧标尺刻度 + 四角裁切标记 + 幽灵章节数字 | Linear / Vercel 文档页 | **所有章节分隔页**（8 页）与封面 | 分隔页全铺；其他页不用 |
-| E2 | 节点连线示意图当底，标签用文字叠在节点下 | Mobbin MCP 海报 | **架构 / 产业链 / 生态关系页**（如 s4-chain、s6-arch） | ≤3 页；用了 E2 的页不再放架构图 |
-| E3 | 图表去坐标去文字、只留走势线、压到 ~40% 亮度，大字结论压在上面 | Godly 上 Ascension 式全出血页 | **章节结论页 / 一句话结论页**（如 s2-arr 之前加一页「40×」） | ≤2 页；真正的数据图放在相邻页正常展示 |
-| E4 | 层叠窗口框：图表装进带标题栏的窗口，后面两层错位空框 | Mobbin 的 B150 截图 | **所有图页**（图 + 一句话结论的页型） | 图页全用；三层均为纯色块 + 1px 边线，不用阴影 |
-| E5 | 上下色块分割：上半块一个数，下半块四个口径 | Godly 上 KIM 海报 | **关键数字页 / 执行摘要统帅页**（stats、各章首个关键数字页） | ≤3 页；朱红/强调色只在此类页出现 |
-
-落页优先级（同一页多种手法冲突时）：E5 > E3 > E2 > E4 > E1。一页只能有一种。
+| E1 | 点阵网格 + 左侧标尺刻度 + 四角裁切标记（编辑式另加幽灵章节数字） | Linear / Vercel 文档页 | 封面 + 所有章节分隔页 | 只用于这两类页 |
+| E2 | 节点连线示意图当底，标签用 HTML 文字叠放 | Mobbin MCP 海报 | 架构 / 产业链 / 生态关系页 | ≤3 页；用了 E2 的页不再放原关系图，原图细节进讲稿 |
+| E3 | 图表去坐标去文字、只留走势线并压暗，大字结论压在上面 | Godly 上 Ascension 式全出血页 | **新增**的一句话结论页，放在对应数据图页之前 | ≤2 页；真正的数据图在后一页正常展示 |
+| E4 | 层叠窗口框：图表装进带标题栏的窗口，后面两层错位空框 | Mobbin 的 B150 截图 | 所有「标题 + 图」页 | 图页全用；三层纯色块 + 描边，不用阴影 |
+| E5 | 上下色块分割：上半一个数，下半若干口径 | Godly 上 KIM 海报 | 关键数字页 / 执行摘要统帅页 | ≤3 页；强调色整块只在此类页出现 |
 
 ## 用量原则（硬性）
-1. 一页只用一种背景手法。
-2. 全册背景手法不超过三种的**同时出现在相邻 5 页内**；整册五种都可用，但要按上表的页型分配，不混用。
-3. 任何背景元素的对比度低于正文：纸色底上背景线/点 ≤ #D9D4C8，暗底上 ≤ #1E2630；幽灵数字 ≤ #E7E2D6。
-4. 底图不带任何文字（E2 的标签是 HTML 文字叠放，不画进图里）。
-5. 超过上述用量即回到「AI 模板感」；宁可留白也不叠第二层。
+1. 一页只用一种背景手法；冲突时 E5 > E3 > E2 > E4 > E1。
+2. 全册 E1–E5 都可用，但**任意相邻 5 页内不超过 3 种**；E4 是图表容器，不计入。
+3. 背景元素的对比度低于正文：线、点、节点框用比纸色深一档的浅色（见参数表），暗底上的走势线亮度 ≤ 正文的 40%。
+4. 底图不带任何文字：E2 标签是 HTML 叠放；E3 走势线用**原始数据点重画**（无轴、无字、单色），不要把现成图表压暗——数值标签会留下来。
+5. 超过用量即回到「AI 模板感」；宁可留白也不叠第二层。
+
+## 方向参数表
+
+坐标以 1920×1080 画布计；固定定位元素守 `left+width ≤ 1792`、`top+height ≤ 952`（全出血底图除外）。
+
+| 手法 | 编辑式（纸 #F6F3EC） | B 海报（纸 #F2EFE6） |
+|---|---|---|
+| E1 底图 | 点 #D9D4C8 间距 48，标尺 #B8B2A4，裁切角 #8C8577 2px；右上幽灵数字 620px #E7E2D6 | 点 #D6D0C2，标尺 #ADA696，裁切角 #111111 3px；不用幽灵数字，改为 360px 黑色实心章号 + 76px 朱红章名 |
+| E1 正文容器 | `left:128 top:128 width:1664 height:792` | `left:128 top:120 width:1664 height:832`（封面同） |
+| E2 底图 | 暗底 #0B0D10，线 #1E2630，节点 88px 圆角 #131820 | 纸底，线 #D6D0C2 3px，节点 80px 方块 #ECE8DD / 边 #CFC8B8，hub 132px #E3DED0 / 边 #B9B2A2 |
+| E3 底图 | 暗底 #0B0D10，走势线 #E8EAEE | 墨底 #111111，走势线米色 #F2EFE6 |
+| E4 窗口 | 右侧三层：前窗 `left:752 top:222 width:1040 height:720`，中窗 −32/−36，后窗 −64/−72；圆角 14，1px #D6D2C8；底 #FFFFFF / #F2EEE5 / #ECE8DD；左侧 540px 文字栏 | 全宽三层：前窗 `left:136 width:1656`，3px #111111 直角，底 #F6F3EC（与图表底色一致）；中、后窗各往左上错 20px，2px 黑边，底 #ECE8DD / #E3DED0 |
+| E4 竖向 | 固定 | 前窗 top = h2 底边 + 68；bottom = min(页脚 top − 24, 944)；图旁有说明栏时前窗宽 1180、说明栏放右侧；案例页前窗高 470，两栏判断 / 局限放框下 36px |
+| E5 | 上块 560px 主色 #244B74（或朱红），300px 巨数 + 右侧 28px 说明；下块 4 栏 | 上块 440px 朱红 #FF3B1F，270px 巨数 + 72px 单位 + 右侧说明（次要对照数写进说明）；下块 3×2 格，60px 数字；页脚来源压成一行 |
 
 ## 生成
-- 脚本：`decks/style_sampler/bg/gen_bg.py`（PIL + numpy，1920×1080）。E1 `bg_dotgrid.png`（~10 KB）、E2 `bg_network.png`（~12 KB，节点坐标：hub (1380,540)，节点 (1040,300/540/780)、(1700,330/540/750)、(1380,220/860)）、E3 `bg_chartfade.png`（合成三条走势线 + 高斯光晕，再整体压暗，~75 KB）。
-- E4、E5 不用底图，纯 div 实现（见下）。
-- 用 Artifact `asset:true` + `file_paths` 一次上传；把返回的 id 记进 `tools/render/blobmap.txt` 供本地渲染。
+- 编辑式：`decks/style_sampler/bg/gen_bg.py`（E1 `bg_dotgrid.png`、E2 `bg_network.png`）。其中 E3 `bg_chartfade.png` 是把带标签的暗色图压暗得到的，**违反第 4 条，不要再用**。
+- B 海报：`decks/style_sampler/bg/gen_bg_b.py <repo> <out_dir>`，生成 `bg_dotgrid_b.png`、`bg_network_b.png`，以及三张 E3 走势底：`bg_fade_arr_b.png`（年化收入）、`bg_fade_swe_b.png`（SWE-bench 顶分）、`bg_fade_bars_b.png`（规模柱）。走势线都用 `report/figs` 里的原始数据点重画。
+- 新方向照 `gen_bg_b.py` 改纸色与线色即可；E4、E5 不用底图，纯 div 实现。
+- 用 Artifact `asset:true` + `file_paths` 上传到**目标 deck**；返回的 id 记进 `tools/render/blobmap.txt` 供本地渲染。
 
 ## 写法（幻灯片格式子集内）
-- **E1 / E2 / E3（全出血底图页）**：`<img src="/_blob/<id>" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover">` 作 section 第一个子元素；section 本身不设 padding；**正文整体装进一个 `position:absolute;left:128px;top:96px;width:1664px;height:824px;display:flex;flex-direction:column` 的容器**（分隔页 top:128px;height:792px），页脚仍是 `bottom:64px` 的 pinned 行。不这样做，正文会被底图盖住。
-- **E2 标签**：每个节点一条 `position:absolute` 的 mono 20px 文字，`left = 节点x−80, top = 节点y+52, width:160px;text-align:center`；hub 标签 22px 粗体。
-- **E3 文字区**：大数 200px Noto Serif SC 900 + 48px 标题 + 两栏 22px 说明，整体落在底图左下已压暗的区域（宽 ≤1100px）。
-- **E4 窗口**：三个 `position:absolute` 的 div，依次 `left:744/776/808px; top:150/186/222px; width:1040px; height:720px; border-radius:14px; border:1px solid #D6D2C8`，底色 #ECE8DD / #F2EEE5 / #FFFFFF；前窗内：48px 标题栏（三个 12px 圆点 + mono 18px 文件名/样本量）+ `<img 1000×600 contain>`；左侧 540px 文字栏放标题（40px）+ 一句说明 + 3–4 行关键数。
-- **E5 分割**：section `padding:0; flex-direction:column`；上块 `height:560px; background:#FF3B1F`（或主色 #244B74）内放 300px 巨数 + 右侧 28px 说明；下块 `flex:1` 内 4 栏，每栏 `border-top:3px solid #1A1D22`，mono 18px 口径标签 + 64px 数字 + 20px 说明；页脚注明「口径不同，不可相加」。
+- **全出血底图页（E1 / E3）**：`<img src="/_blob/<id>" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover">` 作 section 第一个子元素；section 不设 padding；正文整体装进一个绝对定位容器（尺寸见参数表），页脚仍是 `bottom` 固定的一行。不这样做，正文会被底图盖住。
+- **E2**：底图作第一个子元素，section 保持基础页 padding；顶栏照常，左侧 820px 文字栏放标题（44px）+ 一段说明（24px，上方 4px 黑线）。节点坐标：hub (1380,540)；左列 (1040, 300/540/780)；右列 (1700, 330/540/750)；上 (1380,220)、下 (1380,860)。标签 mono 20px：左右列节点 `left = x−92, top = y+50, width:184px; text-align:center`；上下两个节点标签放在节点右侧 `left = x+56, top = y−16, width:300px`，避开 hub 连线与页脚；hub 标签衬线 900 22px，`left:1316 top:510 width:128`。表示风险或断裂的节点标签用小字红。
+- **E3**：容器 `left:96 top:64 width:1728 height:840`，顶栏 + 左下文字区（宽 ≤1100）：200px 衬线 900 大数 + 48px 标题 + 两栏 22px 说明（各 520px）；文字落在底图已压暗的左下区域。讲稿写明底纹对应哪张图。
+- **E4 / E5**：见参数表；三层框都在正常排版的元素之前。
 
-## 套用到 45 页主 deck 的落位清单
-- E1：d1–d8 共 8 页分隔页 + cover。
-- E4：s1-map、s2-timeline、s2-sources、s2-forecast、s2-bottomup、s2-arr、s2-china、s2-trust、s3-prices、s3-swebench、s4-value、s5-segments、s5-qa、s5-journey、s6-memory、s6-horizon、s7-usage、s7-forces、s7-pricing、s8-risk 等所有「标题 + 图」页。
-- E2：s4-chain、s6-arch（≤3 页，连线图替代原架构图或与之并存时只留一个）。
-- E5：stats（执行摘要关键数字页）；可另选 1–2 页章内关键数字页。
-- E3：在 s2-arr 之前或 s8-predictions 之前各加 1 页一句话结论页，≤2 页。
-- 自查：套用后跑 `tools/render/render.py`，全出血页触底为设计预期，其余照常。
+## 主 deck 落位清单（B 海报，47 页）
+- E1：cover、d1–d8（9 页）。
+- E2：s4-chain、s6-arch（2 页，替代原产业链图与架构矩阵，矩阵细节留在讲稿）。
+- E3：新增 e3-arr（s2-arr 之前，底纹为年化收入走势）、e3-pred（s8-predictions 之前，底纹为 SWE-bench 顶分走势），共 2 页。
+- E4：其余 25 张「标题 + 图」页。
+- E5：stats（1 页）。
+- 风险页、方法页：B 墨底基础页，不加背景层。
+- 自查：套用后跑 `tools/render/render.py`；全出血页触底属设计预期，其余照常。

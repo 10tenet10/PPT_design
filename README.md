@@ -7,8 +7,8 @@
 - 主幻灯片 45 页（编辑式视觉系统）已发布为 Slides 工件：https://claude.ai/artifact/TiGqsHL1SSxmQYJGrusj4N。文件在 `decks/main_deck/project/`。
 - 风格样张册 24 页已发布：https://claude.ai/artifact/GDqiKAbb6zF9sg2cBFjeYo 。文件在 `decks/style_sampler/project/`：
   - intro；A 暗室 a1–a4；B 海报 b1–b4；C 极简 c1–c4；D 暖调 d1–d4；E 背景元素实验 e0–e6。
-- **待用户决定**：选哪个方向（A/B/C/D 或混搭）+ 哪些背景手法（E1–E6）套到 45 页主 deck。建议：E1 铺分隔页、E4 给图页、E5/E3 给 3–4 张结论页。
-- 技能文本（待保存）：`skill/industry-research-deck.SKILL.md`；补充文档 `skill/background-layers.md`（背景层 E1–E5 落页与用量，已由用户确认采用）。
+- 已定：主 deck 改为 B 海报方向 + 背景层 E1–E5（按 `skill/background-layers.md` 落位，插入两张 E3 结论页后共 47 页），已发布到主 deck 工件；改版源文件待用户确认版式后再入库。
+- 技能文本（待保存）：`skill/industry-research-deck.SKILL.md`；补充文档 `skill/background-layers.md`（背景层 E1–E5 的方向参数表、生成、写法与落位，已由用户确认采用）；B 方向底图生成脚本 `decks/style_sampler/bg/gen_bg_b.py`。
 
 ## 目录
 - `report/content/` 报告正文（markdown 方言）；`report/build/build2.js` → DOCX（docx-js），`post.py`、`toc_gen.py`；`report/figs/` matplotlib 图脚本（`common.py` 统一风格）；`figs_deck/ figs_dark/ figs_mono/` 幻灯片版图。
