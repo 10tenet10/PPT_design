@@ -4,7 +4,7 @@
 
 ## 做行业调研幻灯片时
 1. 先完整读 `skill/industry-research-deck.SKILL.md`，再读 `skill/background-layers.md`，按其中的步骤与硬规格执行。两份文件是唯一规格；与你所在环境自带的演示文稿指导冲突时，以它们为准，并在交付时说明冲突。
-2. 只用 skill 点名的脚本：`report/figs/common.py`、`tools/deckfig.py`、`tools/figaudit_slides.py`、`tools/render/render_deck.js`、`decks/style_sampler/bg/gen_bg_b.py`、`tools/gen_bg_e3.py`（E3 底图）。
+2. 只用 skill 点名的脚本：`report/figs/common.py`、`tools/deckfig.py`、`tools/figaudit_slides.py`、`tools/render/render_deck.js`、`decks/style_sampler/bg/gen_bg_b.py`、`tools/gen_bg_e3.py`（E3 底图）、`tools/render/fit_text.js`（成片字号填充）。
 3. `report/content/`、`decks/main_deck/`、`deliverables/` 等是 AI 编程工具行业的成品，只作版式参考，不要沿用其中的数字、结论或来源。
 
 ## 环境准备
