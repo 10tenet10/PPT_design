@@ -30,7 +30,8 @@ def fade(fig, out_name, k0):
     fig.canvas.draw(); a = np.asarray(fig.canvas.buffer_rgba())[:, :, :3].astype(np.float32); plt.close(fig)
     base = np.array([17, 17, 17], np.float32)
     yy = np.linspace(0, 1, H)[:, None, None]; xx = np.linspace(0, 1, W)[None, :, None]
-    k = k0 * (1 - np.clip((yy - 0.5) / 0.5, 0, 1)) * np.clip((xx - 0.05) / 0.5, 0.2, 1)
+    # 文字落在左下：向下、向左淡出，左下象限几乎压到底色
+    k = k0 * (1 - np.clip((yy - 0.35) / 0.4, 0, 1)) * np.clip((xx - 0.25) / 0.45, 0.05, 1)
     Image.fromarray(np.clip(base + (a - base) * k, 0, 255).astype(np.uint8)).save(f"{OUT}/{out_name}", optimize=True)
 
 # ARR trajectories (same points as report/figs/make_figs_a.py fig2_3), log scale
@@ -45,7 +46,7 @@ series = [
 fig, ax = canvas()
 for i, pts in enumerate(series):
     ax.plot([d(a) for a, b in pts], [b for a, b in pts], "-o", color=CREAM, lw=5 if i == 0 else 3, ms=11 if i == 0 else 8, alpha=1 if i == 0 else 0.7)
-ax.set_yscale("log"); ax.set_ylim(0.002, 9); ax.set_xlim(d("2024-09-01"), d("2026-12-15"))
+ax.set_yscale("log"); ax.set_ylim(0.00004, 60); ax.set_xlim(d("2024-03-01"), d("2026-12-15"))
 for y in (0.01, 0.1, 1):
     ax.axhline(y, color=CREAM, lw=1, alpha=0.25)
 fade(fig, "bg_fade_arr_b.png", 0.34)
@@ -67,8 +68,8 @@ swe = [("2024-06", 33.4), ("2024-08", 33.2), ("2024-10", 49.0), ("2025-02", 62.3
 fig, ax = canvas()
 ax.plot([d(a + "-15") for a, _ in swe], [b for _, b in swe], "-o", color=CREAM, lw=5, ms=11)
 ax.plot([d("2025-09-15"), d("2026-05-15")], [23.3, 77.8], "-s", color=CREAM, lw=3, ms=8, alpha=0.6)
-ax.set_xlim(d("2024-01-01"), d("2026-10-01")); ax.set_ylim(-10, 105)
-for y in (25, 50, 75):
+ax.set_xlim(d("2023-09-01"), d("2026-10-01")); ax.set_ylim(-110, 135)
+for y in (50, 75):
     ax.axhline(y, color=CREAM, lw=1, alpha=0.25)
 fade(fig, "bg_fade_swe_b.png", 0.34)
 
