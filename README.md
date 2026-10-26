@@ -4,7 +4,7 @@
 
 ## 当前状态（2026-10-26）
 - 报告 v3（65 页 DOCX/PDF）已交付：`deliverables/`。
-- 主幻灯片 45 页（编辑式视觉系统）已发布为 Slides 工件：https://claude.ai/artifact/（主 deck，见会话）。文件在 `decks/main_deck/project/`。
+- 主幻灯片 45 页（编辑式视觉系统）已发布为 Slides 工件：https://claude.ai/artifact/TiGqsHL1SSxmQYJGrusj4N。文件在 `decks/main_deck/project/`。
 - 风格样张册 24 页已发布：https://claude.ai/artifact/GDqiKAbb6zF9sg2cBFjeYo 。文件在 `decks/style_sampler/project/`：
   - intro；A 暗室 a1–a4；B 海报 b1–b4；C 极简 c1–c4；D 暖调 d1–d4；E 背景元素实验 e0–e6。
 - **待用户决定**：选哪个方向（A/B/C/D 或混搭）+ 哪些背景手法（E1–E6）套到 45 页主 deck。建议：E1 铺分隔页、E4 给图页、E5/E3 给 3–4 张结论页。
