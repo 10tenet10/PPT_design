@@ -13,15 +13,15 @@
 
 ### 当前状态（2026-10-26）
 - 报告 v3（65 页 DOCX/PDF）已交付：`deliverables/`。
-- 主幻灯片 45 页（编辑式视觉系统）已发布为 Slides 工件：https://claude.ai/artifact/TiGqsHL1SSxmQYJGrusj4N。文件在 `decks/main_deck/project/`。
+- 主幻灯片已发布为 Slides 工件：https://claude.ai/artifact/TiGqsHL1SSxmQYJGrusj4N。文件在 `decks/main_deck/project/`。
 - 风格样张册 24 页已发布：https://claude.ai/artifact/GDqiKAbb6zF9sg2cBFjeYo 。文件在 `decks/style_sampler/project/`：
   - intro；A 暗室 a1–a4；B 海报 b1–b4；C 极简 c1–c4；D 暖调 d1–d4；E 背景元素实验 e0–e6。
-- 已定：主 deck 改为 B 海报方向 + 背景层 E1–E5（按 `skill/background-layers.md` 落位，插入两张 E3 结论页后共 47 页），已发布到主 deck 工件；改版源文件待用户确认版式后再入库。
+- 主 deck 已定稿为 B 海报方向 + 背景层 E1–E5（按 `skill/background-layers.md` 落位，插入两张 E3 结论页后共 47 页），文件在 `decks/main_deck/project/`，底图在 `decks/main_deck/bg/`，转换脚本 `decks/main_deck/to_b.py`；渲染自查已通过（剩余标记见提交说明）。
 - 技能文本：`skill/industry-research-deck.SKILL.md`；补充文档 `skill/background-layers.md`（背景层 E1–E5 的方向参数表、生成、写法与落位，已由用户确认采用）；B 方向底图生成脚本 `decks/style_sampler/bg/gen_bg_b.py`。
 
 ### 目录
 - `report/content/` 报告正文（markdown 方言）；`report/build/build2.js` → DOCX（docx-js），`post.py`、`toc_gen.py`；`report/figs/` matplotlib 图脚本（`common.py` 统一风格）；`figs_deck/ figs_dark/ figs_mono/` 幻灯片版图。
-- `decks/main_deck/project/` 主 deck（deck.json + slides/*.html）。
+- `decks/main_deck/project/` 主 deck（B 海报版，deck.json + 47 个 slides/*.html）；改版前的编辑式 45 页见 git 历史。
 - `decks/style_sampler/project/` 样张册；`decks/style_sampler/bg/gen_bg.py` 生成背景底图（点阵、节点连线、曲线压暗、光晕颗粒、蓝图网格）。
 - `tools/` 构建与自查脚本：`build.sh`、`rowcheck.py`（DOCX 表格行对 PDF 核对）、`figaudit*.py`、`figs_deck.py` + `deck_cfg.json`、`figs_variants.py`。
 - `tools/render/` 渲染自查：`render_deck.js`（通用，任意 deck）；`render.py`、`render_s.py` 为样例会话的旧版（路径写死）、`blobmap.txt`（/_blob/<id> → 本地 PNG 映射）、两张 contact sheet。
