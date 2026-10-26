@@ -6,30 +6,45 @@
 - 一句话提示（任何编码智能体通用）：
   > 先完整阅读本仓库的 `skill/industry-research-deck.SKILL.md` 与 `skill/background-layers.md` 并严格照做，就〈行业名〉做一份行业调研幻灯片。
 - 入口文件：`AGENTS.md`（Codex 等读取）、`CLAUDE.md`（Claude Code，导入 AGENTS.md）；不读这两个文件的工具，用上面那句提示即可。
-- 环境准备：中文字体 Noto CJK、Python `matplotlib`；渲染自查需 Node 版 `playwright` + Chromium（`node tools/render/render_deck.js <project 目录> <blobmap> <输出目录>`）。取证需要能打开一手来源站点，被网络策略拦截时在环境设置里放行。
-- 下文「当前状态」与 `report/`、`decks/main_deck/` 等都是 AI 编程工具样例，只作版式参考，不要沿用其中的数字与结论。
+- 两份 skill 文件是唯一规格：`industry-research-deck.SKILL.md` 管取证、图表、成片与自查；`background-layers.md` 管背景层 E1–E5 的参数、生成与落位。
+- 环境准备：中文字体 Noto CJK、Python `matplotlib`；渲染与字号填充需 Node 版 `playwright` + Chromium。取证需要能打开一手来源站点，被网络策略拦截时在环境设置里放行。
+
+### 新行业可用的工具（skill 点名的只有这些）
+| 用途 | 文件 |
+|---|---|
+| 图表统一风格 | `report/figs/common.py`（被下一行导入） |
+| 幻灯片版作图层 | `tools/deckfig.py`；范例 `tools/examples/smart_ring_make_figs.py` |
+| 图表审计（重叠、溢出、小字） | `tools/figaudit_slides.py` |
+| 背景层底图 | `decks/style_sampler/bg/gen_bg_b.py`（E1、E2）；`tools/gen_bg_e3.py`（E3，范例 `tools/examples/smart_ring_e3_pred.json`） |
+| 成片字号填充 | `tools/render/fit_text.js` |
+| 渲染自查 | `tools/render/render_deck.js` |
+
+成片后的顺序：先 `node tools/render/fit_text.js <project 目录> <blobmap>` 把字号抬到基准并按空间放大，再 `node tools/render/render_deck.js <project 目录> <blobmap> <输出目录>` 渲染自查。blobmap 把幻灯片里的 `/_blob/<id>` 映射到本地 PNG（每行“id 路径”，或 JSON）。
 
 ## 样例：AI 编程工具行业
+样例只作版式与流程参考，不要沿用其中的数字、结论与来源。
 
-### 当前状态（2026-10-26）
-- 报告 v3（65 页 DOCX/PDF）已交付：`deliverables/`。
-- 主幻灯片已发布为 Slides 工件：https://claude.ai/artifact/TiGqsHL1SSxmQYJGrusj4N。文件在 `decks/main_deck/project/`。
-- 风格样张册 24 页已发布：https://claude.ai/artifact/GDqiKAbb6zF9sg2cBFjeYo 。文件在 `decks/style_sampler/project/`：
-  - intro；A 暗室 a1–a4；B 海报 b1–b4；C 极简 c1–c4；D 暖调 d1–d4；E 背景元素实验 e0–e6。
-- 主 deck 已定稿为 B 海报方向 + 背景层 E1–E5（按 `skill/background-layers.md` 落位，插入两张 E3 结论页后共 47 页），文件在 `decks/main_deck/project/`，底图在 `decks/main_deck/bg/`，转换脚本 `decks/main_deck/to_b.py`；渲染自查已通过（剩余标记见提交说明）。
-- 技能文本：`skill/industry-research-deck.SKILL.md`；补充文档 `skill/background-layers.md`（背景层 E1–E5 的方向参数表、生成、写法与落位，已由用户确认采用）；B 方向底图生成脚本 `decks/style_sampler/bg/gen_bg_b.py`。
+### 内容
+- **报告**：`deliverables/` 下三版 DOCX/PDF（最新为 v3，65 页）；正文在 `report/content/`（markdown 方言），图表脚本与成图在 `report/figs/`，幻灯片版图在 `report/figs_deck/`、`figs_dark/`、`figs_mono/`。
+- **主幻灯片**：`decks/main_deck/project/`（`deck.json` + 47 个 `slides/*.html`），B 海报方向 + 背景层 E1–E5；底图在 `decks/main_deck/bg/`，编辑式改 B 海报的转换脚本 `decks/main_deck/to_b.py`。改版前的编辑式 45 页见 git 历史。
+- **风格样张册**：`decks/style_sampler/project/`，24 页：intro；A 暗室 a1–a4；B 海报 b1–b4；C 极简 c1–c4；D 暖调 d1–d4；E 背景元素实验 e0–e6。底图脚本 `decks/style_sampler/bg/gen_bg.py`、`gen_bg_b.py`。
+- **参考来源**：`source_post/` 是用户给的帖子「硅谷设计师私藏的 10 个网站」正文与链接，样张册的四个方向取材于此。
 
-### 目录
-- `report/content/` 报告正文（markdown 方言）；`report/build/build2.js` → DOCX（docx-js），`post.py`、`toc_gen.py`；`report/figs/` matplotlib 图脚本（`common.py` 统一风格）；`figs_deck/ figs_dark/ figs_mono/` 幻灯片版图。
-- `decks/main_deck/project/` 主 deck（B 海报版，deck.json + 47 个 slides/*.html）；改版前的编辑式 45 页见 git 历史。
-- `decks/style_sampler/project/` 样张册；`decks/style_sampler/bg/gen_bg.py` 生成背景底图（点阵、节点连线、曲线压暗、光晕颗粒、蓝图网格）。
-- `tools/` 构建与自查脚本：`build.sh`、`rowcheck.py`（DOCX 表格行对 PDF 核对）、`figaudit*.py`、`figs_deck.py` + `deck_cfg.json`、`figs_variants.py`。
-- `tools/render/` 渲染自查：`render_deck.js`（通用，任意 deck）；`render.py`、`render_s.py` 为样例会话的旧版（路径写死）、`blobmap.txt`（/_blob/<id> → 本地 PNG 映射）、两张 contact sheet。
-- `source_post/` 用户给的帖子「硅谷设计师私藏的 10 个网站」正文与链接。
+### 本地预览
+幻灯片文件是 Slides 工件格式（内联样式 HTML），图片引用 `/_blob/<id>`。在仓库根目录运行即可在本地看成片：
 
-### 云端续作要点
-- 幻灯片工件用 Artifact 工具发布：`root` = 含 `project/` 的目录，`file_path` 一个文件，`files` 其余；改 deck.json 用 Edit 不用 Write。
-- 底图资产已上传到样张册（blob id 见 `tools/render/blobmap.txt` 末尾五行）；主 deck 若要用同样底图需重新上传到主 deck 工件。
-- 幻灯片格式是内联样式闭合子集：无渐变/阴影/z-index；全出血底图上的正文须整体放进 `position:absolute` 容器。
-- 渲染自查用 `tools/render/render_deck.js`（Node 版 playwright 与本地 Chromium）；中文字体用 Noto CJK 替代 Google 字体。
-- 云端容器没有预装 matplotlib，重出图表或生成底图前先 `pip install matplotlib`。
+```
+node tools/render/render_deck.js decks/main_deck/project tools/render/blobmap.txt out/main_deck
+node tools/render/render_deck.js decks/style_sampler/project tools/render/blobmap.txt out/style_sampler
+```
+
+`tools/render/blobmap.txt` 用仓库内相对路径；输出每页一张 1920×1080 PNG 和一份 `report.json`。
+
+### 样例专用脚本（路径写死，新行业不要用）
+下列脚本写死了生成样例时所在机器的路径（`/home/claude/report`、临时草稿目录等），只用于在原环境重出 AI 编程工具样例，直接在别处运行会失败：
+- 报告流水线：`report/build/build2.js`、`build.js`、`post.py`、`toc_gen.py`，以及 `tools/build.sh`。
+- 样例图表：`report/figs/make_figs_*.py`、`tools/figs_all.sh`、`tools/figs_deck.py`（配 `tools/deck_cfg.json`）、`tools/figs_variants.py`、`tools/figaudit.py`、`tools/figaudit_deck.py`。
+- 旧版渲染：`tools/render/render.py`、`render_s.py`（已由 `render_deck.js` 取代）。
+- 底图：`decks/style_sampler/bg/gen_bg.py` 的 E3 部分读取写死路径的图表，且是已退役的淡出版 E3；新 E3 用 `tools/gen_bg_e3.py`。
+
+`tools/rowcheck.py`（DOCX 表格行对 PDF 核对，参数为两个文件路径）不依赖固定路径，需要 DOCX/PDF 报告时可用。
