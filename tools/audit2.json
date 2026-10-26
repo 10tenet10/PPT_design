@@ -1,0 +1,332 @@
+{
+ "fig1_1_boundary.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.4,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   4.15
+  ]
+ },
+ "fig1_2_framework.png": {
+  "scale": 1.267,
+  "min_print_pt": 8.4,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.08
+  ]
+ },
+ "fig2_1_timeline.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.0,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   4.64
+  ]
+ },
+ "fig2_2_marketsize.png": {
+  "scale": 1.027,
+  "min_print_pt": 7.0,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.16
+  ]
+ },
+ "fig2_3_arr.png": {
+  "scale": 1.163,
+  "min_print_pt": 8.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.19
+  ]
+ },
+ "fig2_4_adoption_trust.png": {
+  "scale": 1.055,
+  "min_print_pt": 6.5,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.05
+  ]
+ },
+ "fig2_5_china.png": {
+  "scale": 1.032,
+  "min_print_pt": 6.2,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.74
+  ]
+ },
+ "fig3_1_pest.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.9,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.81
+  ]
+ },
+ "fig3_2_prices.png": {
+  "scale": 1.031,
+  "min_print_pt": 6.7,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.94
+  ]
+ },
+ "fig3_3_swebench.png": {
+  "scale": 1.1,
+  "min_print_pt": 6.8,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.85
+  ]
+ },
+ "fig4_1_chain.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   4.64
+  ]
+ },
+ "fig4_2_valueflow.png": {
+  "scale": 1.031,
+  "min_print_pt": 6.2,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.14
+  ]
+ },
+ "fig5_1_segments.png": {
+  "scale": 1.191,
+  "min_print_pt": 7.0,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.44
+  ]
+ },
+ "fig5_2_journey.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.57
+  ]
+ },
+ "fig5_3_qa.png": {
+  "scale": 1.031,
+  "min_print_pt": 6.4,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.73
+  ]
+ },
+ "fig_caseA.png": {
+  "scale": 1.215,
+  "min_print_pt": 7.4,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.02
+  ]
+ },
+ "fig_caseB.png": {
+  "scale": 1.186,
+  "min_print_pt": 7.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.24
+  ]
+ },
+ "fig6_1_arch.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.6,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   4.45
+  ]
+ },
+ "fig6_2_verify_matrix.png": {
+  "scale": 1.031,
+  "min_print_pt": 5.8,
+  "n_small": 1,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.93
+  ]
+ },
+ "fig6_3_memory_layers.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.67
+  ]
+ },
+ "fig6_4_horizon.png": {
+  "scale": 1.184,
+  "min_print_pt": 7.5,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.04
+  ]
+ },
+ "fig7_1_landscape.png": {
+  "scale": 1.14,
+  "min_print_pt": 6.2,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [
+   [
+    "Cursor 25.5%⏎（ARR \\$40 亿+）",
+    0,
+    3.3
+   ],
+   [
+    "Replit（ARR ~\\$5 亿）⏎SO 使用率 2.3%",
+    0,
+    3.6
+   ]
+  ],
+  "size_in": [
+   6.34,
+   3.56
+  ]
+ },
+ "fig7_2_usage.png": {
+  "scale": 1.072,
+  "min_print_pt": 6.8,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.95
+  ]
+ },
+ "fig7_3_fiveforces.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.0,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   4.54
+  ]
+ },
+ "fig7_4_pricing.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.7,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.44
+  ]
+ },
+ "fig8_1_risk_matrix.png": {
+  "scale": 1.223,
+  "min_print_pt": 7.3,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.76
+  ]
+ },
+ "fig2_2_forecast.png": {
+  "scale": 1.163,
+  "min_print_pt": 7.6,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.28
+  ]
+ },
+ "fig2_bottomup.png": {
+  "scale": 1.17,
+  "min_print_pt": 7.6,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.48
+  ]
+ },
+ "fig1_map.png": {
+  "scale": 1.267,
+  "min_print_pt": 6.8,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   4.93
+  ]
+ }
+}

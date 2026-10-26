@@ -1,0 +1,437 @@
+{
+ "fig1_1_boundary.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.6,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [
+   [
+    "上游投入（产业链分析，不计入市场规模）",
+    0,
+    2.3
+   ],
+   [
+    "下游用户",
+    0,
+    2.3
+   ]
+  ],
+  "size_in": [
+   6.34,
+   3.96
+  ]
+ },
+ "fig1_2_framework.png": {
+  "scale": 1.017,
+  "min_print_pt": 6.5,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [
+   [
+    "第三章⏎宏观环境与⏎发展动力(PEST)",
+    5.8,
+    0
+   ]
+  ],
+  "size_in": [
+   6.34,
+   2.63
+  ]
+ },
+ "fig2_1_timeline.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.0,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   4.45
+  ]
+ },
+ "fig2_2_marketsize.png": {
+  "scale": 1.027,
+  "min_print_pt": 7.0,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.16
+  ]
+ },
+ "fig2_3_arr.png": {
+  "scale": 1.163,
+  "min_print_pt": 8.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.19
+  ]
+ },
+ "fig2_4_adoption_trust.png": {
+  "scale": 1.055,
+  "min_print_pt": 6.5,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.05
+  ]
+ },
+ "fig2_5_china.png": {
+  "scale": 1.032,
+  "min_print_pt": 6.2,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.74
+  ]
+ },
+ "fig3_1_pest.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.9,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.81
+  ]
+ },
+ "fig3_2_prices.png": {
+  "scale": 1.031,
+  "min_print_pt": 6.7,
+  "n_small": 0,
+  "collisions": [
+   [
+    "$\\mathdefault{10^{2}}$",
+    "Opus 4 / 4.1⏎(2025)",
+    1.0
+   ]
+  ],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.94
+  ]
+ },
+ "fig3_3_swebench.png": {
+  "scale": 1.1,
+  "min_print_pt": 6.8,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.85
+  ]
+ },
+ "fig4_1_chain.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [
+   [
+    "IDE 内嵌 / AI 原生 IDE⏎Copilot、Cursor、Trae、⏎",
+    2.3,
+    0
+   ]
+  ],
+  "size_in": [
+   6.34,
+   4.54
+  ]
+ },
+ "fig4_2_valueflow.png": {
+  "scale": 1.031,
+  "min_print_pt": 6.2,
+  "n_small": 0,
+  "collisions": [
+   [
+    "Cursor 2025 年中⏎（投资机构估计）",
+    "Replit 2025⏎（Sacra 估计区间）",
+    0.13
+   ]
+  ],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.14
+  ]
+ },
+ "fig5_1_segments.png": {
+  "scale": 1.213,
+  "min_print_pt": 7.2,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [
+   [
+    "CLI/云端智能体；METR：熟悉的大⏎型仓库上−19%；仅 20% 用于生产排",
+    3.0,
+    0
+   ],
+   [
+    "【本报告重点细分】产品覆盖最薄：⏎不可导入既有仓库、无法独立验收、⏎修复循环消耗",
+    2.8,
+    0
+   ]
+  ],
+  "size_in": [
+   6.34,
+   3.51
+  ]
+ },
+ "fig5_2_journey.png": {
+  "scale": 1.267,
+  "min_print_pt": 6.8,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.67
+  ]
+ },
+ "fig5_3_qa.png": {
+  "scale": 1.031,
+  "min_print_pt": 5.7,
+  "n_small": 1,
+  "collisions": [
+   [
+    "\"其他\"为 100% 减各项所得；自选择样本，不可泛化",
+    "20",
+    0.72
+   ],
+   [
+    "\"其他\"为 100% 减各项所得；自选择样本，不可泛化",
+    "30",
+    0.72
+   ],
+   [
+    "\"其他\"为 100% 减各项所得；自选择样本，不可泛化",
+    "40",
+    0.72
+   ],
+   [
+    "50",
+    "-50",
+    0.24
+   ]
+  ],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.73
+  ]
+ },
+ "fig_caseA.png": {
+  "scale": 1.221,
+  "min_print_pt": 7.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.59
+  ]
+ },
+ "fig_caseB.png": {
+  "scale": 1.196,
+  "min_print_pt": 6.8,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.49
+  ]
+ },
+ "fig6_1_arch.png": {
+  "scale": 1.243,
+  "min_print_pt": 6.3,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [
+   [
+    "本地 shell（可选 OS 沙箱）⏎+ 浏览器扩展 + MCP",
+    2.2,
+    0
+   ],
+   [
+    "平台内运行时⏎（容器 / WebContainers / 沙箱）",
+    11.3,
+    0
+   ],
+   [
+    "Codex cloud、Copilot cloud⏎agent、Devin、Ju",
+    5.0,
+    0
+   ]
+  ],
+  "size_in": [
+   6.34,
+   3.88
+  ]
+ },
+ "fig6_2_verify_matrix.png": {
+  "scale": 1.031,
+  "min_print_pt": 5.8,
+  "n_small": 1,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.93
+  ]
+ },
+ "fig6_3_memory_layers.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.1,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.67
+  ]
+ },
+ "fig6_4_horizon.png": {
+  "scale": 1.184,
+  "min_print_pt": 7.5,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.04
+  ]
+ },
+ "fig7_1_landscape.png": {
+  "scale": 1.14,
+  "min_print_pt": 6.2,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [
+   [
+    "Cursor 25.5%⏎（ARR \\$40 亿+）",
+    0,
+    3.3
+   ],
+   [
+    "Replit（ARR ~\\$5 亿）⏎SO 使用率 2.3%",
+    0,
+    3.6
+   ]
+  ],
+  "size_in": [
+   6.34,
+   3.56
+  ]
+ },
+ "fig7_2_usage.png": {
+  "scale": 1.072,
+  "min_print_pt": 6.8,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   2.95
+  ]
+ },
+ "fig7_3_fiveforces.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.0,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   4.25
+  ]
+ },
+ "fig7_4_pricing.png": {
+  "scale": 1.267,
+  "min_print_pt": 7.6,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.08
+  ]
+ },
+ "fig8_1_risk_matrix.png": {
+  "scale": 1.223,
+  "min_print_pt": 7.3,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.76
+  ]
+ },
+ "fig2_2_forecast.png": {
+  "scale": 1.163,
+  "min_print_pt": 7.6,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.28
+  ]
+ },
+ "fig2_bottomup.png": {
+  "scale": 1.17,
+  "min_print_pt": 7.6,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   6.34,
+   3.48
+  ]
+ },
+ "fig1_map.png": {
+  "scale": 1.267,
+  "min_print_pt": 6.6,
+  "n_small": 0,
+  "collisions": [
+   [
+    "Antigravity",
+    "谷歌",
+    0.14
+   ],
+   [
+    "Antigravity CLI",
+    "谷歌",
+    0.14
+   ],
+   [
+    "Devin Desktop",
+    "Cognition",
+    0.17
+   ]
+  ],
+  "overflow": [
+   [
+    "Qoder CN（原灵码）",
+    3.1,
+    0.0
+   ]
+  ],
+  "size_in": [
+   6.34,
+   4.35
+  ]
+ }
+}

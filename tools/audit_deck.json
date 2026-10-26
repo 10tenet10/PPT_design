@@ -1,0 +1,284 @@
+{
+ "fig1_1_boundary.png": {
+  "min_proj_pt": 9.5,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   9.01,
+   4.44
+  ]
+ },
+ "fig1_2_framework.png": {
+  "min_proj_pt": 13.9,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   4.24
+  ]
+ },
+ "fig2_1_timeline.png": {
+  "min_proj_pt": 7.2,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   7.86,
+   4.44
+  ]
+ },
+ "fig2_2_marketsize.png": {
+  "min_proj_pt": 11.7,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.28,
+   4.44
+  ]
+ },
+ "fig2_3_arr.png": {
+  "min_proj_pt": 13.6,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.49,
+   4.44
+  ]
+ },
+ "fig2_4_adoption_trust.png": {
+  "min_proj_pt": 10.9,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   4.28
+  ]
+ },
+ "fig2_5_china.png": {
+  "min_proj_pt": 11.1,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   3.93
+  ]
+ },
+ "fig3_1_pest.png": {
+  "min_proj_pt": 8.4,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   8.5,
+   4.44
+  ]
+ },
+ "fig3_2_prices.png": {
+  "min_proj_pt": 11.4,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   4.2
+  ]
+ },
+ "fig3_3_swebench.png": {
+  "min_proj_pt": 11.8,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   4.09
+  ]
+ },
+ "fig4_1_chain.png": {
+  "min_proj_pt": 6.5,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   7.25,
+   4.44
+  ]
+ },
+ "fig4_2_valueflow.png": {
+  "min_proj_pt": 10.3,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.5,
+   4.44
+  ]
+ },
+ "fig5_1_segments.png": {
+  "min_proj_pt": 11.0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   10.65,
+   4.44
+  ]
+ },
+ "fig5_2_journey.png": {
+  "min_proj_pt": 10.7,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   10.48,
+   4.44
+  ]
+ },
+ "fig5_3_qa.png": {
+  "min_proj_pt": 10.8,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   3.88
+  ]
+ },
+ "fig_caseA.png": {
+  "min_proj_pt": 12.5,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   2.83
+  ]
+ },
+ "fig_caseB.png": {
+  "min_proj_pt": 12.0,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   3.14
+  ]
+ },
+ "fig6_1_arch.png": {
+  "min_proj_pt": 8.4,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   8.2,
+   4.44
+  ]
+ },
+ "fig6_2_verify_matrix.png": {
+  "min_proj_pt": 9.8,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   4.22
+  ]
+ },
+ "fig6_3_memory_layers.png": {
+  "min_proj_pt": 8.6,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   9.54,
+   4.44
+  ]
+ },
+ "fig6_4_horizon.png": {
+  "min_proj_pt": 12.5,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   4.3
+  ]
+ },
+ "fig7_1_landscape.png": {
+  "min_proj_pt": 9.3,
+  "collisions": [],
+  "overflow": [
+   [
+    "GitHub Copilot⏎58.7%",
+    0,
+    3.5
+   ],
+   [
+    "Cursor 25.5%⏎（ARR \\$40 亿+）",
+    0,
+    7.7
+   ],
+   [
+    "Claude Code⏎65.5%",
+    0,
+    5.2
+   ],
+   [
+    "Replit（ARR ~\\$5 亿）⏎SO 使用率 2.3%",
+    0,
+    8.0
+   ]
+  ],
+  "size_in": [
+   9.45,
+   4.44
+  ]
+ },
+ "fig7_2_usage.png": {
+  "min_proj_pt": 11.4,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.56,
+   4.17
+  ]
+ },
+ "fig7_3_fiveforces.png": {
+  "min_proj_pt": 6.3,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   7.13,
+   4.44
+  ]
+ },
+ "fig7_4_pricing.png": {
+  "min_proj_pt": 11.9,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   10.67,
+   4.44
+  ]
+ },
+ "fig8_1_risk_matrix.png": {
+  "min_proj_pt": 10.4,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   9.83,
+   4.44
+  ]
+ },
+ "fig2_2_forecast.png": {
+  "min_proj_pt": 12.3,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   11.18,
+   4.44
+  ]
+ },
+ "fig2_bottomup.png": {
+  "min_proj_pt": 11.5,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   10.36,
+   4.44
+  ]
+ },
+ "fig1_map.png": {
+  "min_proj_pt": 6.7,
+  "collisions": [],
+  "overflow": [],
+  "size_in": [
+   7.15,
+   4.44
+  ]
+ }
+}

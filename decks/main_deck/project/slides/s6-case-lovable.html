@@ -1,0 +1,22 @@
+<section id="s6-case-lovable" data-transition="fade" style="background:#F6F3EC;color:#1A1D22;font-family:'Noto Sans SC',Arial,sans-serif;padding:96px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<p style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:20px;color:#5A5F66;letter-spacing:2px">06 — 案例 4 · Lovable 生成应用的 Supabase RLS 缺失，CVE-2025-48757 与后续事件</p>
+<p style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:20px;color:#5A5F66;letter-spacing:2px">图 6-4</p>
+</div>
+<hr style="width:1664px;border-top:1px solid #D6D2C8">
+<h2 style="font-family:'Noto Serif SC',Georgia,serif;font-size:46px;line-height:1.3;font-weight:600;color:#1A1D22;width:1560px">同类访问控制漏洞 18 个月内反复出现，并从生成的应用扩展到平台自身</h2>
+<img src="/_blob/a759fd77e089ea4c11282bd56e7414f8" alt="2025-03 至 2026-09 的事件链：漏洞披露、厂商响应、行业范围扫描" style="width:1664px;height:380px;object-fit:contain">
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;border-top:1px solid #1A1D22;padding:18px 0 0">
+<p style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:19px;color:#244B74;letter-spacing:2px">能够支持的判断</p>
+<p style="font-size:22px;line-height:1.55;color:#1A1D22">一体化平台的默认安全姿态是风险转嫁给最不具备判断力的用户；"扫描提示 + 用户自行决定"模式在 2025–2026 年被反复证明不足</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;border-top:1px solid #B9462B;padding:18px 0 0">
+<p style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:19px;color:#B9462B;letter-spacing:2px">局限</p>
+<p style="font-size:22px;line-height:1.55;color:#1A1D22">事件 1 的主要二手来源为竞争厂商员工，存在利益关系；事件 3 的影响规模只有研究员单方说法。但 CVE 与 Lovable 自身承认可交叉印证</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1300px;font-size:20px;line-height:1.4;color:#5A5F66">资料来源：[151][152][153]，研究整理；Lovable 现行 Quick scan 已在每次发布时自动运行并包含 RLS 检查</p>
+<p style="position:absolute;right:128px;bottom:64px;font-family:'IBM Plex Mono','Courier New',monospace;font-size:20px;color:#5A5F66;letter-spacing:1px">34 / 45</p>
+<aside>事件链：2025-03 扫描 170 个项目发现 303 个端点可被任意读写；2025-04 Lovable 2.0 加入安全扫描（仅查 RLS 存在）；2025-05 CVE 发布；2026-02 推广应用暴露 18,697 条记录；2026-04 平台 API 不校验项目所有权；2026-08 Quick scan 改为每次发布自动运行；2026-09 UpGuard 发现 16,326 个 Supabase 库公开可读（不限于 Lovable）。</aside>
+</section>
