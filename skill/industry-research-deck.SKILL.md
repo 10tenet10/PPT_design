@@ -84,7 +84,7 @@ description: 就任何一个行业做市场调研并生成一套幻灯片（Slid
 - `background-layers.md`：背景层 E1–E5 的方向参数表（编辑式 / B 海报）、生成方法、写法、用量与主 deck 落位清单。
 
 ## 6. 自查（用户允许时才做；做之前问一句）
-- 本地 Chromium（Playwright）1920×1080 渲染每页：`tools/render/render.py`（主 deck）/ `render_s.py`（样张）；`blobmap.txt` 把 `/_blob/<id>` 映射到本地 PNG，字体用 Noto CJK 替代。
+- 本地 Chromium（Playwright）1920×1080 渲染每页：`node tools/render/render_deck.js <project 目录> <blobmap> <输出目录>`；blobmap 把 `/_blob/<id>` 映射到本地 PNG（.json 或每行「id 路径」的 .txt），字体用 Noto CJK 替代。旧版 `render.py` / `render_s.py` 路径写死，只属于样例会话。
 - 报告三类问题：正文触底（flowBottom ≥ 页脚 top−8）、元素越界/滚动溢出、标题 >2 行；全出血页触底属设计预期要单独说明。
 - 拼 contact sheet 人眼复核孤字、换行；先列清单，改完再跑一次，只修清单上的问题。
 
