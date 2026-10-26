@@ -23,3 +23,4 @@
 - 底图资产已上传到样张册（blob id 见 `tools/render/blobmap.txt` 末尾五行）；主 deck 若要用同样底图需重新上传到主 deck 工件。
 - 幻灯片格式是内联样式闭合子集：无渐变/阴影/z-index；全出血底图上的正文须整体放进 `position:absolute` 容器。
 - 渲染自查前需 `pip install playwright` 与本地 Chromium；中文字体用 Noto CJK 替代 Google 字体。
+- 云端容器没有预装 matplotlib，重出图表或生成底图前先 `pip install matplotlib`。
