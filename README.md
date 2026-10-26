@@ -9,7 +9,7 @@
 - 两份 skill 文件是唯一规格：`industry-research-deck.SKILL.md` 管取证、图表、成片与自查；`background-layers.md` 管背景层 E1–E5 的参数、生成与落位。
 - 环境准备：中文字体 Noto CJK、Python `matplotlib`；渲染与字号填充需 Node 版 `playwright` + Chromium。取证需要能打开一手来源站点，被网络策略拦截时在环境设置里放行。
 
-### 新行业可用的工具（skill 点名的只有这些）
+### 新行业可用的工具
 | 用途 | 文件 |
 |---|---|
 | 图表统一风格 | `report/figs/common.py`（被下一行导入） |
@@ -39,12 +39,5 @@ node tools/render/render_deck.js decks/style_sampler/project tools/render/blobma
 ```
 
 `tools/render/blobmap.txt` 用仓库内相对路径；输出每页一张 1920×1080 PNG 和一份 `report.json`。
-
-### 样例专用脚本（路径写死，新行业不要用）
-下列脚本写死了生成样例时所在机器的路径（`/home/claude/report`、临时草稿目录等），只用于在原环境重出 AI 编程工具样例，直接在别处运行会失败：
-- 报告流水线：`report/build/build2.js`、`build.js`、`post.py`、`toc_gen.py`，以及 `tools/build.sh`。
-- 样例图表：`report/figs/make_figs_*.py`、`tools/figs_all.sh`、`tools/figs_deck.py`（配 `tools/deck_cfg.json`）、`tools/figs_variants.py`、`tools/figaudit.py`、`tools/figaudit_deck.py`。
-- 旧版渲染：`tools/render/render.py`、`render_s.py`（已由 `render_deck.js` 取代）。
-- 底图：`decks/style_sampler/bg/gen_bg.py` 的 E3 部分读取写死路径的图表，且是已退役的淡出版 E3；新 E3 用 `tools/gen_bg_e3.py`。
 
 `tools/rowcheck.py`（DOCX 表格行对 PDF 核对，参数为两个文件路径）不依赖固定路径，需要 DOCX/PDF 报告时可用。
