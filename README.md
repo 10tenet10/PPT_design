@@ -6,7 +6,7 @@
 - 一句话提示（任何编码智能体通用）：
   > 先完整阅读本仓库的 `skill/industry-research-deck.SKILL.md` 与 `skill/background-layers.md` 并严格照做，就〈行业名〉做一份行业调研幻灯片。
 - 入口文件：`AGENTS.md`（Codex 等读取）、`CLAUDE.md`（Claude Code，导入 AGENTS.md）；不读这两个文件的工具，用上面那句提示即可。
-- 两份 skill 文件是唯一规格：`industry-research-deck.SKILL.md` 管取证、图表、成片与自查；`background-layers.md` 管背景层 E1–E5 的参数、生成与落位。
+- skill 文件是唯一规格：`industry-research-deck.SKILL.md` 管取证、图表、成片与自查；`background-layers.md` 管背景层 E1–E5 的参数、生成与落位；`management-topics.md` 是管理学题材（出海、财务分析等课程与案例作业）的替换条款，题目属于这类时加读。
 - 环境准备：中文字体 Noto CJK、Python `matplotlib`；渲染与字号填充需 Node 版 `playwright` + Chromium。取证需要能打开一手来源站点，被网络策略拦截时在环境设置里放行。
 
 ### 新行业可用的工具
