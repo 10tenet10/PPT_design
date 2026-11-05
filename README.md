@@ -18,6 +18,7 @@
 | 背景层底图 | `decks/style_sampler/bg/gen_bg_b.py`（E1、E2）；`tools/gen_bg_e3.py`（E3，范例 `tools/examples/smart_ring_e3_pred.json`） |
 | 成片字号填充 | `tools/render/fit_text.js` |
 | 渲染自查 | `tools/render/render_deck.js` |
+| 导出 PDF / PPTX | `tools/render/export_deck.js` + `tools/render/pptx_from_png.py` |
 
 成片后的顺序：先 `node tools/render/fit_text.js <project 目录> <blobmap>` 把字号抬到基准并按空间放大，再 `node tools/render/render_deck.js <project 目录> <blobmap> <输出目录>` 渲染自查。blobmap 把幻灯片里的 `/_blob/<id>` 映射到本地 PNG（每行“id 路径”，或 JSON）。
 
@@ -26,7 +27,8 @@
 
 ### 内容
 - **报告**：`deliverables/` 下三版 DOCX/PDF（最新为 v3，65 页）；正文在 `report/content/`（markdown 方言），图表脚本与成图在 `report/figs/`，幻灯片版图在 `report/figs_deck/`、`figs_dark/`、`figs_mono/`。
-- **主幻灯片**：`decks/main_deck/project/`（`deck.json` + 47 个 `slides/*.html`），B 海报方向 + 背景层 E1–E5；底图在 `decks/main_deck/bg/`，编辑式改 B 海报的转换脚本 `decks/main_deck/to_b.py`。改版前的编辑式 45 页见 git 历史。
+- **主幻灯片成品**（不用 Claude 也能打开）：`deliverables/AI编程工具行业调研_幻灯片_2026.pdf`（47 页，文字可选中）与 `.pptx`（每页一张全幅图片 + 讲稿备注，文字不可编辑；可编辑版请在 Slides 工件里用 Share › Export 导出）。
+- **主幻灯片源文件**：`decks/main_deck/project/`（`deck.json` + 47 个 `slides/*.html`），B 海报方向 + 背景层 E1–E5；底图在 `decks/main_deck/bg/`，编辑式改 B 海报的转换脚本 `decks/main_deck/to_b.py`。改版前的编辑式 45 页见 git 历史。
 - **风格样张册**：`decks/style_sampler/project/`，24 页：intro；A 暗室 a1–a4；B 海报 b1–b4；C 极简 c1–c4；D 暖调 d1–d4；E 背景元素实验 e0–e6。底图脚本 `decks/style_sampler/bg/gen_bg.py`、`gen_bg_b.py`。
 - **参考来源**：`source_post/` 是用户给的帖子「硅谷设计师私藏的 10 个网站」正文与链接，样张册的四个方向取材于此。
 
@@ -39,5 +41,14 @@ node tools/render/render_deck.js decks/style_sampler/project tools/render/blobma
 ```
 
 `tools/render/blobmap.txt` 用仓库内相对路径；输出每页一张 1920×1080 PNG 和一份 `report.json`。
+
+导出给不用 Claude 的人：
+
+```
+node tools/render/export_deck.js decks/main_deck/project tools/render/blobmap.txt out/deck   # out/deck.pdf、out/deck_png/、out/deck_notes.json
+python3 tools/render/pptx_from_png.py out/deck "标题"                                          # out/deck.pptx
+```
+
+字体用本地 Noto CJK 替代 Google 字体，与在线工件的字形略有差异。
 
 `tools/rowcheck.py`（DOCX 表格行对 PDF 核对，参数为两个文件路径）不依赖固定路径，需要 DOCX/PDF 报告时可用。

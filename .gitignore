@@ -1,3 +1,8 @@
 node_modules/
 __pycache__/
 *.pyc
+
+# report/build 的构建产物与预览图（成品在 deliverables/）
+report/build/*.jpg
+report/build/*.docx
+report/build/*.pdf
