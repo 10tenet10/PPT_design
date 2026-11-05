@@ -1,0 +1,158 @@
+{
+ "fig1_2_structure.png": {
+  "scale": 0.997,
+  "min_slide_px": 27.7,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "shown_px": [
+   1664,
+   545
+  ]
+ },
+ "fig2_1_trend.png": {
+  "scale": 0.827,
+  "min_slide_px": 21.8,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "shown_px": [
+   1292,
+   580
+  ]
+ },
+ "fig2_2_products.png": {
+  "scale": 0.927,
+  "min_slide_px": 27.0,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "shown_px": [
+   1448,
+   580
+  ]
+ },
+ "fig2_3_channels.png": {
+  "scale": 0.894,
+  "min_slide_px": 23.6,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [
+   [
+    "2026 年起含经销商⏎经平台代售的收入⏎口径不可比",
+    41.8,
+    0
+   ]
+  ],
+  "shown_px": [
+   1418,
+   580
+  ]
+ },
+ "fig3_1_margin.png": {
+  "scale": 0.971,
+  "min_slide_px": 28.3,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "shown_px": [
+   1664,
+   577
+  ]
+ },
+ "fig3_2_expense.png": {
+  "scale": 0.975,
+  "min_slide_px": 28.4,
+  "n_small": 0,
+  "collisions": [
+   [
+    "4.93",
+    "4.30",
+    0.4
+   ]
+  ],
+  "overflow": [],
+  "shown_px": [
+   1649,
+   580
+  ]
+ },
+ "fig4_1_cashflow.png": {
+  "scale": 0.905,
+  "min_slide_px": 23.9,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "shown_px": [
+   1420,
+   580
+  ]
+ },
+ "fig4_2_contract.png": {
+  "scale": 0.975,
+  "min_slide_px": 25.7,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "shown_px": [
+   1507,
+   580
+  ]
+ },
+ "fig5_2_peers.png": {
+  "scale": 0.866,
+  "min_slide_px": 22.9,
+  "n_small": 0,
+  "collisions": [
+   [
+    "-54.6%",
+    "2025 年营业收入同比",
+    0.14
+   ],
+   [
+    "+7.3%",
+    "（重述基数；2025 年为重述口径）",
+    0.63
+   ]
+  ],
+  "overflow": [
+   [
+    "2025 年营业收入同比",
+    24.6,
+    4.2
+   ]
+  ],
+  "shown_px": [
+   1411,
+   580
+  ]
+ },
+ "fig6_2_prices.png": {
+  "scale": 0.905,
+  "min_slide_px": 23.9,
+  "n_small": 0,
+  "collisions": [],
+  "overflow": [],
+  "shown_px": [
+   1499,
+   580
+  ]
+ },
+ "fig6_3_scenarios.png": {
+  "scale": 0.866,
+  "min_slide_px": 24.1,
+  "n_small": 0,
+  "collisions": [
+   [
+    "1,780.2  +3.5%",
+    "国信 1776.1",
+    0.45
+   ]
+  ],
+  "overflow": [],
+  "shown_px": [
+   1352,
+   580
+  ]
+ }
+}
