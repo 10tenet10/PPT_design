@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """生成贵州茅台经营分析 deck（编辑式 + E1/E3/E4/E5）：deck.json + slides/*.html。
 运行：python3 drafts/moutai_fin/gen_deck.py  → drafts/moutai_fin/deck/project/"""
-import os, json, html
+import os, re, json, html
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "deck", "project")
 os.makedirs(os.path.join(OUT, "slides"), exist_ok=True)
 
@@ -30,6 +30,10 @@ def aside(t):
     return f'<aside>{html.escape(t)}</aside>' if t else ''
 def section(sid, body, bg=PAPER, color=INK, pad="96px 128px 160px", extra="display:flex;flex-direction:column;gap:24px"):
     return f'<section id="{sid}" data-transition="fade" style="background:{bg};color:{color};font-family:{SANS};padding:{pad};{extra}">\n{body}\n</section>\n'
+
+def _fix_aside(h):
+    m = re.search(r'</section>\n(<aside>.*?</aside>)$', h, re.S)
+    return h[:m.start()] + m.group(1) + '\n</section>\n' if m else h
 
 PAGES = []  # (id, builder) ; builder(n, total) -> html
 def add(sid, fn): PAGES.append((sid, fn))
@@ -301,7 +305,7 @@ recs("recs", "08 — 发现与建议", "把管理指标从营收增速换成渠�
 # ================= 输出 =================
 order = [sid for sid, _ in PAGES]; total = len(order)
 for i, (sid, fn) in enumerate(PAGES, 1):
-    open(os.path.join(OUT, "slides", sid + ".html"), "w", encoding="utf-8").write(fn(i, total))
+    open(os.path.join(OUT, "slides", sid + ".html"), "w", encoding="utf-8").write(_fix_aside(fn(i, total)))
 sections = {"intro": {"description": "封面与方法", "start": "cover"}}
 names = {"d1": "第一章 公司与业务边界", "d2": "第二章 收入与增长拆解", "d3": "第三章 盈利与成本结构", "d4": "第四章 现金流与资产负债", "d5": "第五章 同业对比", "d6": "第六章 预算与预测", "d7": "第七章 风险预警", "d8": "第八章 发现与建议"}
 for k, v in names.items(): sections[k] = {"description": v, "start": k}

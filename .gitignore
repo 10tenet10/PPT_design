@@ -6,3 +6,6 @@ __pycache__/
 report/build/*.jpg
 report/build/*.docx
 report/build/*.pdf
+
+# 导出中间截图（成品 PDF/PPTX 在同目录）
+drafts/*/export/*_png/
